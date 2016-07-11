@@ -1,3 +1,27 @@
+/*
+
+TEST EXAMPLE
+------------
+
+test.txt = ba cc aa bb ba bb cc cc;
+
+countMap = {
+ba: 2,
+cc: 3,
+aa: 1,
+bb: 2
+};
+
+keys = Object.keys(countMap) => [ba, cc, aa, bb];
+
+expectedOutput
+--------------
+cc: 3
+ba: 2
+bb: 2
+aa: 1
+
+*/
 function readFileAndCountDupes(evt) {
   var file = evt.target.files[0];
   if (file) {
@@ -6,36 +30,6 @@ function readFileAndCountDupes(evt) {
     reader.onload = function(e) {
 
       var contents = e.target.result;
-      /* TEST EXAMPLE
-         ------------
-
-        test.txt = ba cc aa bb ba bb cc cc;
-
-        countMap = {
-            ba: 2,
-            cc: 3,
-            aa: 1,
-            bb: 2
-        };
-
-        keys = Object.keys(countMap) => [ba, cc, aa, bb];
-        sortedkeys = keys.sort(function(a,b){
-          if(countMap[a] > countMap[b]){
-            return 1;
-          }
-          if(countMap[a] === countMap[b]){
-            return 0;
-          }
-        });
-
-        expectedOutput
-        --------------
-            cc: 3
-            ba: 2
-            bb: 2
-            aa: 1
-
-      */
       var ct = reader.result;
       var words = ct.split(' ');
       console.log("The words in the file are " + words);
@@ -58,7 +52,6 @@ function readFileAndCountDupes(evt) {
       console.log("This is countMap " + JSON.stringify(countMap));
       //save reference to the de-duped keys
       var keys = Object.keys(countMap);
-      // console.log("This is keys BEFORE weighted ", keys);
       //sort keys by:
       //  1st Weight - numOfOccurences
       //  2nd Weight - alphabetize if numOfOccurences is Equal(=)
@@ -68,7 +61,7 @@ function readFileAndCountDupes(evt) {
         if(countMap[a] < countMap[b]){ return 1; }
         //else values are equal and sort alphabetically / normally
       });
-      // console.log("This is keys AFTER weighted ", keys);
+
       for(var j = 0; j < keys.length; j++){
         if(countMap.hasOwnProperty(keys[j])){
           //append each sorted key and numOfOccurences as an <li>
@@ -80,7 +73,7 @@ function readFileAndCountDupes(evt) {
       } //end of for
 
     } //end of reader.onload
-    //Parse the uploaded input file as text
+    //Parse the input file as text
     reader.readAsText(file);
   } else {
     list.appendChild(document.createTextNode("Unable to load or parse file"));
