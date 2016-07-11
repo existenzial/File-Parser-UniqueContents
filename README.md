@@ -6,9 +6,6 @@ For UX developers looking to experiment with the File API, parsing a TXT file an
 Quick Links:
 
 *  [Installing](#installing)
-*  [Usage](#usage)
-*  [File API](#fileapi)
-*  [Responsive Design](#design)
 
 ## <a name="installing"></a> Installing the File Parser
 To **install** the File Parser:
@@ -27,8 +24,3 @@ Then **run** the parser:
 # To run the parser in Google Chrome
 chrome index.html
 ```
-## <a name="usage"></a> Using the File Parser
-
-## <a name="fileapi"></a> File API Documentation
-
-## <a name="design"></a> Responsive Design Links
