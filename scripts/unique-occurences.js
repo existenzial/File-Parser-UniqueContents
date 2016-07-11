@@ -28,7 +28,7 @@ function readFileAndCountDupes(evt) {
       //save reference to the de-duped keys
       var keys = Object.keys(countMap);
       //sort keys in alphabetized order
-      keys.sort();
+      keys.sort().reverse();
 
       //append each sorted key and numOfOccurences as an <li>
       for(var j = 0; j < keys.length; j++){

@@ -1,7 +1,7 @@
 # File Parser - IE6+ Compatible
 ![Small - Medium - Large Responsive Design](img/design.png)
 
-For UX developers looking to experiment with the File API, parsing a TXT file and getting an array returned of that file's unique string contents and their number of occurrence
+For UX developers looking to experiment with the File API, parsing a TXT file and getting an array returned of that file's unique string contents in descending order and weighted by highest number of occurrence
 
 Quick Links:
 
