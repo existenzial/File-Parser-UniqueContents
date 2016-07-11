@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Driver</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link rel='stylesheet' type='text/css'  href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body>
+    <!-- Div Layout for IE6+ Compatibility -->
+    <div id="wrapper">
+      <!-- Header -->
+      <div id="header">
+        <img id="logo" alt="Driver Logo" src="driver_logo_brushed.png" />
+        <h1 id="title">File Parse</h1>
+      </div>
+      <!-- Main Content -->
+      <div id="main">
+
+        <!-- Input -->
+        <div id="fileupload">
+          <input id="fileinput" title="Upload a New File" type="file" />
+        </div>
+
+        <!-- Output -->
+        <div id="fileparsed">
+          <!-- Output List -->
+          <h2 id="listtitle"> Unique Contents</h2>
+          <ul id="results"></ul>
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+      <div id="footer">
+        <p id="info">&copy; Jazz Lyles, 2016</p>
+      </div>
+
+    </div>
+
+    <!-- IE6+ Media Query Polyfill -->
+    <script src="lib/respond.matchmedia.addListener.min.js"></script>
+    <script src="lib/respond.min.js"></script>
+    
+    <!-- Main Script -->
+    <script src="scripts/unique-occurences.js"></script>
+  </body>
+</html>
